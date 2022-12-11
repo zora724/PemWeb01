@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body style="margin: 200px;
+padding: 100px;">
+    <form>
+        Nama Anda:
+        <br>
+        <input type="text" required="" placeholder="Nama"  maxlength="20"  id="nama anda" name="nama anda">
+        <br>
+        Email:
+        <br>
+        <input type="email" required="" placeholder="Email" id="email" name="email">
+        <br>
+        Jam Keberangkatan:
+        <br>
+        <input type="time" required="" placeholder="Jam Keberangkatan" id="jam" name="jam">
+        <br>
+        Tujuan:
+        <br>
+        <input type="text" required="" placeholder="Tujuan" id="tujuan" name="tujuan">
+        <br>
+        Jumlah Tiket:
+        <br>
+        <input type="number"  min="1" max="5" placeholder="Jumlah Tiket" id="jumlah tiket" name="jumlah">
+        <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+</body>
+    <script>
+        function validation(){
+            var Nama = document.getElementById("Nama").value;
+            var Email = document.getElementById("Email").value;
+            var Jam = document.getElementById("Jam").value;
+            var Tujuan = document.getElementById("Tujuan").value;
+            var Jumlah = document.getElementById("Jumlah").value;
+            var error_mssg = document.getElementById("error_mssg");
+            var text;
+            error_mssg.style.padding = "10px";
+
+            if(nama.length <5){
+			text = "Please Enter Valid Name";
+			error_message.innerHTML = text;
+			return false;
+		}
+
+		    if(Jumlah >5){
+			text = "You only can buy 5 ticket";
+			error_message.innerHTML = text;
+			return false;
+		}
+		    alert("Form Berhasil di Submit !")
+		    return true;
+
+        }
+    </script>
+</html>
