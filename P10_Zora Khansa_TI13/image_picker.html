@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <script>
+        function gambar() {
+            let drop_img = document.getElementById("dropdown_img").value;
+            let img = document.getElementById("image");
+
+            if (drop_img == "gorila") {
+                img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/N%27Tami%2C_Western_Gorilla.jpg/1200px-N%27Tami%2C_Western_Gorilla.jpg");
+                alert("ini gambar gorila");
+
+            } else if (drop_img == "singa") {
+                img.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg");
+                alert("ini gambar singa");
+
+            } else if (drop_img == "elang") {
+                img.setAttribute("src","https://adilkurnia.files.wordpress.com/2017/03/burung-elang.jpg");
+                alert("ini gambar elang");
+            }else {
+                alert("tidak ada gambar");
+            } 
+        }
+    </script>
+</head>
+<body>
+    <select id="dropdown_img" onchange="gambar()">
+        <option hidden>---Pilih Gambar---</option>
+        <option value="gorila">Gorila</option>
+        <option value="singa">Singa</option>
+        <option value="elang">Elang</option>
+    </select>
+    <br>
+    <img  alt="gambar" id="image" >
+</body>
+</html>
